@@ -32,15 +32,15 @@ jobs:
             aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
             aws-region: "ap-south-1"
-        - name: terraform init
-          run: |
-            terraform init
+        # - name: terraform init
+        #   run: |
+        #     terraform init
+        # - name: terraform plan
+        #   run: |
+        #     terraform plan
+          
         - name: terraform destroy
           run: |
             terraform destroy -auto-approve
-          
-        # - name: terraform apply
-        #   run: |
-        #     terraform apply -auto-approve
     
       
